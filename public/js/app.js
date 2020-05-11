@@ -112,10 +112,11 @@ window.addEventListener('load', () => {
     // eslint-disable-next-line no-console
     console.info(`Creating new room: ${roomName}`);
     webrtc.createRoom(roomName, (err, name) => {
-      formEl.form('clear');
+      //formEl.form('clear');
       showChatRoom(name);
       postMessage(`${username} created chatroom`);
     });
+    joinRoom(roomName);
   };
 
   // Join existing Chat Room
